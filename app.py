@@ -4,7 +4,7 @@ import whisper
 st.title("Whisper Audio Transcriber")
 
 
-@st.cache_data(show_spinner=False)
+@st.cache_resource
 def load_whisper_model():
     model = whisper.load_model("base")
     return model
